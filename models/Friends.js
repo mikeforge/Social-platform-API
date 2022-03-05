@@ -24,7 +24,10 @@ const friendsSchema = new Schema(
                   ref: 'Friends',
               },
           ],
-        friendCount: {}     //need to implement count function
+        friendCount: {
+            type: Number,
+            default: 0,
+        }     
     },
     {
         toJSON: {
