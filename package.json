@@ -1,4 +1,10 @@
-{
+{"name": "Social platform API",
+"main": "index.js",
+"license": "MIT",
+"scripts": {
+  "start": "node index",
+  "seed": "node utils/seed"
+},
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
