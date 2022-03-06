@@ -1,10 +1,5 @@
 const { Users } = require('../models');
 
-
-
-
-
-
 module.exports = {
     // Get all users
     getUsers(req, res) {
@@ -41,7 +36,7 @@ module.exports = {
     // create a new user
     createUser(req, res) {
         Users.create(req.body)
-      .then((user) => res.json(user))
+      .then((users) => res.json(users))
       .catch((err) => res.status(500).json(err));
     }
     

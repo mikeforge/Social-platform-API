@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const {
     getUsers,
-    getSingleUser
+    getSingleUser,
+    createUser
 } = require('../../controllers/userController');
 
-router.route('/').get(getUsers);             // .post(createUser);   --string together for same route diff method
+router.route('/').get(getUsers).post(createUser);
 
-router.route('/:userID').get(getSingleUser); // .delete(deleteStudent)
+router.route('/:userID').get(getSingleUser); // .delete(deleteStudent) --add when have delete function
 
 
 
