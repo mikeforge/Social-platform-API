@@ -14,12 +14,13 @@ const usersSchema = new Schema(
           },
         userName: {
               type: String,
+              unique: true,
               required: true,
               max_length: 100,
           },
         email: {
             type: String,
-            required: false,
+            required: true,
             max_length: 50,
           },
         thoughts: [

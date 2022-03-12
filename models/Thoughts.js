@@ -7,15 +7,15 @@ const thoughtSchema = new Schema(
     thought: {
       type: String,
       required: true,
-      maxlength: 200,
+      maxlength: 280,
       minlength: 1,
       default: 'My Thought',
     },
-        userName: {
-            type: String,
-            required: true,
-            max_length: 100
-        },
+    userName: {
+      type: String,
+      required: true,
+      max_length: 100
+    },
     createdAt: {
         type: Date,
         default: Date.now,
