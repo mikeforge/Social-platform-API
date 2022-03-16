@@ -1,5 +1,3 @@
-//Need to move this to subdocument of thoughts model
-
 const { Schema, Types } = require('mongoose');
 
 const reactionsSchema = new Schema (
@@ -28,4 +26,3 @@ const reactionsSchema = new Schema (
 module.exports = reactionsSchema;
 
 
-//Need to move this to subdocument of thoughts model

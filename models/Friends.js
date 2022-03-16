@@ -1,41 +1,43 @@
-const { Schema, model } = require('mongoose');
+//Realized this is duplicate of Users...
 
-const friendsSchema = new Schema(
-    {
-        _id: Schema.Types.ObjectId,
-        userName:{
-            type: String,
-            required: true,
-            max_length: 100,
-        },
-        email: {
-            type: String,
-            required: false,
-            max_length: 50,
-          },
-        thoughts: [
-              {
-                type: Schema.Types.ObjectId,
-                ref: 'Thoughts',
-          }],
-        friends: [
-              {
-                  type: Schema.Types.ObjectId,
-                  ref: 'Friends',
-              },
-          ],
-        friendCount: {
-            type: Number,
-            default: 0,
-        }     
-    },
-    {
-        toJSON: {
-            getters: true,
-        },
-    }
-);
+// const { Schema, model } = require('mongoose');
 
-const Friends = model('friends', friendsSchema);
+// const friendsSchema = new Schema(
+//     {
+//         _id: Schema.Types.ObjectId,
+//         userName:{
+//             type: String,
+//             required: true,
+//             max_length: 100,
+//         },
+//         email: {
+//             type: String,
+//             required: false,
+//             max_length: 50,
+//           },
+//         thoughts: [
+//               {
+//                 type: Schema.Types.ObjectId,
+//                 ref: 'Thoughts',
+//           }],
+//         friends: [
+//               {
+//                   type: Schema.Types.ObjectId,
+//                   ref: 'Friends',
+//               },
+//           ],
+//         friendCount: {
+//             type: Number,
+//             default: 0,
+//         }     
+//     },
+//     {
+//         toJSON: {
+//             getters: true,
+//         },
+//     }
+// );
 
-module.exports = Friends
+// const Friends = model('friends', friendsSchema);
+
+// module.exports = Friends

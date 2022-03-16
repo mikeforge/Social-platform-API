@@ -36,9 +36,12 @@ module.exports = {
     // create a new thought
     createThought(req, res) {
         Thoughts.create(req.body)
-      .then((thoughts) => res.json(thoughts))
+      .then((thoughts) => {
+        Users.findOneAndUpdate({ id:req.body.userid}, {$addToSet: {Thoughts:thoughts.id}})
+        .then((Users) => res.json(Users))
       .catch((err) => res.status(500).json(err));
     //   Users.put(req.body)   -- Need to link thoughts to users on creation
-    }
+    })
+  }
     
 };

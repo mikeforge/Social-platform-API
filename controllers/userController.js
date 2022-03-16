@@ -17,7 +17,7 @@ module.exports = {
     },
     // Get a single user
   getSingleUser(req, res) {
-    Users.findOne({ id: req.params.userId })
+    Users.findOne({ id: req.params._id })
       .select('-__v')
       .lean()
       .then(async (users) =>
